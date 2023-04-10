@@ -1974,9 +1974,9 @@ function neueRunde()
           ErwarteSpielerEingabe = Geber
 -- Nachricht an Geber            
           if Sprache == 'Deutsch' then
-            local Meldung = function () broadcastToColor('Bitte Trumpffarbe wählen: \"blau\", \"gelb\", \"rot\" oder \"grün\" bzw. \"gruen\" in den Chat eingeben',Geber) end
+            Meldung = function () broadcastToColor('Bitte Trumpffarbe wählen: \"blau\", \"gelb\", \"rot\" oder \"grün\" bzw. \"gruen\" in den Chat eingeben',Geber) end
           else
-            local Meldung = function () broadcastToColor('Please select the color of trump: Enter \"blue\", \"yellow\", \"red\" oder \"green\" into the chat',Geber) end
+            Meldung = function () broadcastToColor('Please select the color of trump: Enter \"blue\", \"yellow\", \"red\" oder \"green\" into the chat',Geber) end
           end
           Meldung()
           id_wt4 = Wait.time(Meldung, 5)
